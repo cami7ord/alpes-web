@@ -1,199 +1,51 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portal Banco Alpes - Solicitud</title>
+  <title>Portal Banco Alpes - Resúmen</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <!-- jQuery library -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
   <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <!-- Custom styles for this template -->
-  <link href="style/form-validation.css" rel="stylesheet">
+  <link href="style/signin.css" rel="stylesheet">
 
 </head>
+<body class="text-center form-signin">
 
-<body class="bg-light">
+  <section class="jumbotron text-center">
 
-  <div class="container">
-    <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h2>Solicitud - Tarjeta de Credito</h2>
-      <p class="lead">Ingrese los datos de solicitud.</p>
-    </div>
+    <div class="container">
 
-    <div class="row">
-      <div class="col-md-5 order-md-2 mb-4">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-muted">Tarjeta</span>
-        </h4>
+      <h1 class="jumbotron-heading">¡Felicidades!</h1>
+      <p class="lead text-muted">Tu tarjeta se encuentra en proceso de elaboración y te será entregada en la fecha acordada.</p>
 
-        <div class="d-block my-3">
-          <div class="custom-control custom-radio">
-            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-            <label class="custom-control-label" for="credit">Master Card</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="debit">Visa</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="paypal">American Express</label>
-          </div>
+      <p class="lead text-muted">Por el momento, puedes guardar y usar el siguiente código QR para pagar con tu nueva tarjeta de crédito en las plataformas digitales que se encuentran en la parte inferior.</p>
 
-          <div class="col-md-5 mb-3">
-            <label for="country">Ciclo de facturación</label>
-            <select class="custom-select d-block w-100" id="country" required>
-              <option value="">Escoger...</option>
-              <option>15 días</option>
-              <option>30 días</option>
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid country.
-            </div>
-          </div>
-          <div class="col-md-5 mb-3">
-            <label for="state">Monto</label>
-            <select class="custom-select d-block w-100" id="state" required>
-              <option value="">Escoger...</option>
-              <option>1 millón</option>
-              <option>2 millones</option>
-              <option>3 millones</option>
-              <option>4 millones</option>
-              <option>5 millones</option>
-            </select>
-            <div class="invalid-feedback">
-              Please provide a valid state.
-            </div>
-          </div>
+      <img src="default_qrcode.png">
+
+      <div class="row justify-content-md-center">
+        <div class="col col-lg-2">
+          <img src="apple-pay.png" height="80">
         </div>
-
+        <div class="col col-lg-2">
+        </div>
+        <div class="col col-lg-2">
+          <img src="android-pay.png" height="80">
+        </div>
       </div>
-      <div class="col-md-7 order-md-1">
-        <h4 class="mb-3">Información</h4>
-        <form class="needs-validation" novalidate>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="firstName">Correo electrónico</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="lastName">Número celular</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
-          </div>
 
-
-
-          <div class="mb-3">
-            <label for="address">Dirección Entrega</label>
-            <input type="text" class="form-control" id="address" required>
-            <div class="invalid-feedback">
-              Please enter your shipping address.
-            </div>
-          </div>
-
-
-          <p>
-            <label for="date">Example date</label>
-            <input type="date" class="form-control" id="date" />
-          </p>
-
-
-
-
-
-
-
-          <div class="row">
-            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">
-                Solicitar
-              </button>
-          </div>
-
-
-
-
-          <hr class="mb-4">
-
-          <!-- The Modal -->
-          <div class="modal" id="myModal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <h4 class="modal-title">Terminos y Condiciones</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="form-group">
-                  <div class="col-xs-9">
-                    <div style="border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;">
-                      <p>Lorem ipsum dolor sit amet, veniam numquam has te. No suas nonumes recusabo mea, est ut graeci definitiones. His ne melius vituperata scriptorem, cum paulo copiosae conclusionemque at. Facer inermis ius in, ad brute nominati referrentur
-                        vis. Dicat erant sit ex. Phaedrum imperdiet scribentur vix no, ad latine similique forensibus vel.</p>
-                      <p>Dolore populo vivendum vis eu, mei quaestio liberavisse ex. Electram necessitatibus ut vel, quo at probatus oportere, molestie conclusionemque pri cu. Brute augue tincidunt vim id, ne munere fierent rationibus mei. Ut pro volutpat
-                        praesent qualisque, an iisque scripta intellegebat eam.</p>
-                      <p>Mea ea nonumy labores lobortis, duo quaestio antiopam inimicus et. Ea natum solet iisque quo, prodesset mnesarchum ne vim. Sonet detraxit temporibus no has. Omnium blandit in vim, mea at omnium oblique.</p>
-                      <p>Eum ea quidam oportere imperdiet, facer oportere vituperatoribus eu vix, mea ei iisque legendos hendrerit. Blandit comprehensam eu his, ad eros veniam ridens eum. Id odio lobortis elaboraret pro. Vix te fabulas partiendo.</p>
-                      <p>Natum oportere et qui, vis graeco tincidunt instructior an, autem elitr noster per et. Mea eu mundi qualisque. Quo nemore nusquam vituperata et, mea ut abhorreant deseruisse, cu nostrud postulant dissentias qui. Postea tincidunt
-                        vel eu.</p>
-                      <p>Ad eos alia inermis nominavi, eum nibh docendi definitionem no. Ius eu stet mucius nonumes, no mea facilis philosophia necessitatibus. Te eam vidit iisque legendos, vero meliore deserunt ius ea. An qui inimicus inciderint.</p>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="form-group">
-                  <div class="col-xs-9">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="agree" value="agree" /> He leído y acepto los términos y condiciones
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </form>
-
-
-      </div>
     </div>
-  </div>
 
-  <!-- Bootstrap core JavaScript
-      ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-
+  </section>
 </body>
-
 </html>
