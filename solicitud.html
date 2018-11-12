@@ -15,6 +15,14 @@
   <!-- Custom styles for this template -->
   <link href="style/form-validation.css" rel="stylesheet">
 
+  <script>
+    $(document).ready(function(){
+        $("#modal-button").click(function(){
+            window.open("resumen.html");
+        });
+    });
+  </script>
+
 </head>
 
 <body class="bg-light">
@@ -162,7 +170,7 @@
                 <!-- Modal footer -->
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                  <button type="button" id="modal-button" class="btn btn-primary">Aceptar</button>
                 </div>
 
               </div>
