@@ -22,99 +22,75 @@
 </head>
 <body class="text-center form-signin">
 
+  <section class="jumbotron text-center">
 
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Nuevo Usuario</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Cliente</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
+    <div class="container">
 
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <h1 class="jumbotron-heading">Iniciar sesión</h1>
+      <p class="lead text-muted">Bienvenido a la herramienta virtual para manejar y adquirir productos crediticios. Ingrese sus datos para continuar.</p>
 
-    <form class="form-signin">
-      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Ingresa tus datos:</h1>
-      <p>
-      <label for="input">Nombres completos</label>
-      <input type="text" id="input"  />
-    </p>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="client-tab" data-toggle="tab" href="#client" role="tab" aria-controls="client" aria-selected="true">Cliente</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="new-user-tab" data-toggle="tab" href="#new-user" role="tab" aria-controls="new-user" aria-selected="false">Nuevo usuario</a>
+        </li>
+        
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="client" role="tabpanel" aria-labelledby="client-tab">
 
-    <p>
-        <label for="select">Tipo de documento</label>
-        <select id="select">
-          <option value="">Seleccione</option>
+          <form class="form-signin">
+            <label for="inputEmail" class="sr-only">Correo electrónico</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
+            <label for="inputPassword" class="sr-only">Contraseña</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Recordarme
+              </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+            <p class="mt-5 mb-3 text-muted">Banco de los Alpes &copy; 2018</p>
+          </form>
 
-            <option value="">Cedula de ciudadania</option>
-            <option value="">Cedula de extranjería</option>
-            <option value="">Pasaporte</option>
-          </optgroup>
-        </select>
-      </p>
+        </div>
 
-      <p>
-      <label for="input">Correo Electronico</label>
-      <input type="text" id="input" placeholder="Correo electronico" />
-    </p>
+        <div class="tab-pane fade" id="new-user" role="tabpanel" aria-labelledby="new-user-tab">
+          
+          <form class="form-signin">
+            <label for="inputName" class="sr-only">Nombre</label>
+            <input type="text" id="inputName" class="form-control" placeholder="Nombre" required autofocus>
 
-    <p>
-          <label for="date">Fecha de Nacimiento</label>
-          <input type="date" id="date" />
-        </p>
+            <label for="inputDocumentType" class="sr-only">Tipo de documento</label>
+            <select class="form-control" id="inputDocumentType">
+              <optgroup label="Tipo de documento">
+                <option value="">Cedula de ciudadania</option>
+                <option value="">Cedula de extranjería</option>
+                <option value="">Pasaporte</option>
+              </optgroup>
+            </select>
 
+            <label for="inputId" class="sr-only">Número de documento</label>
+            <input type="number" id="inputDate" class="form-control" placeholder="Número de documento" required/>
+            <label for="inputDate" class="sr-only">Fecha de nacimiento</label>
+            <input type="date" id="inputDate" class="form-control" placeholder="Fecha de nacimiento" required/>
+            <label for="inputEmail" class="sr-only">Correo electrónico</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required>
+            <label for="inputPassword" class="sr-only">Contraseña</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
 
-        <p>
-        <label for="input">Contraseña</label>
-        <input type="password" id="inputPassword" placeholder="Contraseña" required>
-      </p>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+            <p class="mt-5 mb-3 text-muted">Banco de los Alpes &copy; 2018</p>
 
+          </form>
 
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Inicio de Sesión</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
-    </form>
-
-
-
-  </div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-
-    <form class="form-signin">
-      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Ingresa tus datos:</h1>
-      <label for="inputEmail" class="sr-only">Usario</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="sr-only">Contraseña</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Recuerdame
-        </label>
+        </div>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Inicio de Sesión</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
-    </form>
 
-
-  </div>
-</div>
-  <!--
-  <form class="form-signin">
-    <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Por favor ingresa tus datos:</h1>
-    <label for="inputEmail" class="sr-only">Usario</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="sr-only">Contraseña</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Inicio de Sesion</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-  </form>-->
+
+  </section>
 </body>
 </html>
